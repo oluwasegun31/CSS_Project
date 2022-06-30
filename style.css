@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+}
+/* Header styling */
+#nav-bar {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    background-color: #fff;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(204, 204, 204, 0.397);
+    position: fixed;
+}
+#nav-bar > img {
+    margin-left: 20px;
+    width: 35px;
+}
+#nav-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 26px;
+}
+#nav-link>button {
+    font: 600 12px 'poppins', sans-serif;
+    color: #fff;
+    background-color: rgb(170, 210, 54);
+    padding: 9px 34px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+.menu-item {
+    font: 600 14px 'poppins', sans-serif;
+    margin-right: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+#dropdown {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'poppins', sans-serif;
+    background-color: #fff;
+    border-top: 2px solid rgb(170, 210, 54);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px #ccc;
+    width: 180px;
+    height: 130px;
+    position: absolute;
+    transform: translate(-50px, 10px);
+    z-index: 1;
+    display: none;
+}
+.dropitem{
+    padding: 8px 0;
+    border-bottom: 0.5px solid rgba(204, 204, 204, 0.822);
+    width: 75%;
+}
+.dropitem:nth-child(3) {
+    border-bottom: none;
+}
+.dropitem:nth-child(1) {
+    margin-top: 10px;
+}
+#drp:hover #dropdown {
+    display: flex;
+    
+}
+/* landing view styling */
+#vegan {
+    background: rgba(255, 255, 255, 0.781) url('https://edyoda.s3.ap-south-1.amazonaws.com/public/landing-background.png') no-repeat top center;
+    background-size: 100vw 100%;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#vegan > h1 {
+    font: 600 44px 'poppins', sans-serif;
+    letter-spacing: 8.8px;
+    line-height: 1.2;
+    width: 75%;
+    text-align: center;
+    margin-bottom: 26px;
+}
+#vegan > p {
+    font: 400 14px 'poppins', sans-serif;
+    letter-spacing: 0.5px;
+    color: #8b8b99;
+    width: 75%;
+    text-align: center;
+}
+
+/* Step view styling */
+#step-view {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 90vh;
+    width: 100%;
+    text-align: center;
+}
+.step1 {
+    background-color: #5acda6;
+    height: 100%;
+    width: 25%;
+    padding: 150px 24px;
+}
+.step1 > i, .step2 > i, .step3 > i, .step4 > i {
+    color: #fff;
+    font-size: 96px;
+    margin-bottom: 16px;
+}
+.step1 > h1, .step2 > h1, .step3 > h1, .step4 > h1 {
+    color: #fff;
+    font: 600 24px 'poppins', sans-serif;
+    margin-bottom: 50px;
+}
+.step1 > p, .step2 > p, .step3 > p, .step4 > p {
+    color: #fff;
+    font: 400 14px 'poppins', sans-serif;
+    letter-spacing: 0.5px;
+    line-height: 1.6;
+}
+.step2 {
+    background-color: #91ac41;
+    height: 100%;
+    width: 25%;
+    padding: 150px 24px;
+}
+.step3 {
+    background-color: #e4b476;
+    height: 100%;
+    width: 25%;
+    padding: 150px 24px;
+}
+.step4{
+    background-color: #f69dad;
+    width: 25%;
+    height: 100%;
+    padding: 150px 24px;
+}
+
+/* Store section styling */
+#store{
+    background-color: #f7eee2;
+    height: 100vh;
+    width: 100%;
+}
+
+
+@media (min-width:320px) and (max-width:700px) {
+    #drp, .menu-item {
+        display: none;
+    }
+    #vegan > h1 {
+        width: 85%;
+        letter-spacing: 1px;
+    }
+    #vegan > p {
+        width: 100%;
+        padding: 0 5px;
+        letter-spacing: 0;
+    }
+    /* Step view */
+    #step-view {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+    }
+    .step1, .step2, .step3, .step4 {
+        width: 100%;
+        padding: 150px 45px;
+    }
+}
+
+@media (min-width:700px) and (max-width:920px) {
+    #step-view {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .step1, .step2, .step3, .step4 {
+        width: 99%;
+        padding: 150px 45px; 
+    }
+}
