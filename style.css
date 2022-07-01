@@ -108,13 +108,12 @@ body {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    height: 90vh;
     width: 100%;
     text-align: center;
 }
 .step1 {
     background-color: #5acda6;
-    height: 100%;
+    height: 90vh;
     width: 25%;
     padding: 150px 24px;
 }
@@ -136,21 +135,24 @@ body {
 }
 .step2 {
     background-color: #91ac41;
-    height: 100%;
+    height: 90vh;
     width: 25%;
     padding: 150px 24px;
 }
 .step3 {
     background-color: #e4b476;
-    height: 100%;
+    height: 90vh;
     width: 25%;
     padding: 150px 24px;
 }
 .step4{
     background-color: #f69dad;
     width: 25%;
-    height: 100%;
+    height: 90vh;
     padding: 150px 24px;
+}
+.step1>i:hover, .step2>i:hover, .step3>i:hover, .step4>i:hover {
+    transform: scale(1.08);
 }
 
 /* Store section styling */
@@ -158,10 +160,41 @@ body {
     background-color: #f7eee2;
     height: 100vh;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.ff-desc>p {
+    color: #91ac41;
+    font: 300 24px 'caveat', cursive;
+    font-family: cursive;
+    margin: 0;
+    margin-top: 35px;
+}
+.vtxt>h2 {
+    font: 600 44px 'poppins', sans-serif;
+}
+.radtxt>p {
+    font: 500 16px 'poppins', sans-serif;
+    letter-spacing: 0.5px;
+    color: #8b8b99;
+    margin-top: 5px;
+}
+#circlecard {
+    display: flex;
 }
 
 
+
 @media (min-width:320px) and (max-width:700px) {
+    * {
+        box-sizing: border-box;
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+    }
     #drp, .menu-item {
         display: none;
     }
@@ -178,8 +211,9 @@ body {
     #step-view {
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
         width: 100%;
-        height: 100vh;
     }
     .step1, .step2, .step3, .step4 {
         width: 100%;
@@ -191,7 +225,6 @@ body {
     #step-view {
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
     }
     .step1, .step2, .step3, .step4 {
