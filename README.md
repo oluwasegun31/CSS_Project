@@ -1,2 +1,2 @@
 # CSS_Project
-A project on CSS taken after a udemy course
+A project on the basics of CSS 
